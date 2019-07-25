@@ -1,0 +1,70 @@
+@(amiibos : List[Amiibo])
+@doctype.render
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="UTF-8">
+		<title>My Amiibo</title>
+		<link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/stylesheets/navbar.css">
+		<link rel="stylesheet" href="/assets/stylesheets/sort.css">
+	</head>
+	
+	<!--=====================================NAV BAR==========================================-->
+	<body>
+		<div id="menu-nav">
+			<div id="navigation-bar">
+				<ul>
+					<li><a href="#"><i class="fa fa-home"></i><span>Home</span></a></li>
+					<li><a href="#"><i class="fa fa-book"></i><span>Login</span></a></li>
+					<li><a href="#"><i class="fa fa-mycollection"></i><span>My Collection</span></a>
+					</li>
+					<li><a href="#"><i class="fa fa-book"></i><span>Contact</span></a></li>
+					<li><a href="#"><i class="fa fa-book"></i><span>About Amiibo</span></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-8"></div>
+			<div class="col-3">
+				<input type="text" name="searchAmiibo" id="searchName"
+				       placeholder="Search Amiibo">
+				<input type="submit" value="Search" class="btn btn-primary">
+			</div>
+			<div class="col-1"></div>
+		</div>
+		<!--=====================================TITLE BAR==========================================-->
+		<div class="container">
+			<div class="row">
+				<table class="table table-striped table-dark table-hover" id="amiiboTable">
+					<thead>
+						<tr>
+							<th onclick="sortTable(0)">Add</th>
+							<th onclick="sortTable(1)">Amiibo Name</th>
+							<th onclick="sortTable(2)">Game Series</th>
+							<th onclick="sortTable(3)">Type</th>
+							<th onclick="sortTable(4)">Id Number</th>
+						</tr>
+					</thead>
+					<!--======================================================================================-->
+					@for(amiibo <- amiibos){
+					<tbody>
+						<tr>
+							<td>
+								<input type="checkbox" class="custom-control-input" id="add">
+								<label class="container">
+									<input type="checkbox" checked>
+								</label>
+							</td>
+							<td>@amiibo.getAmiiboName</td>
+							<td>@amiibo.getGameId</td>
+							<td>@amiibo.getProductTypeId</td>
+							<td>@amiibo.getAmiiboId</td>
+							<!--	@amiibo.getImageId -->
+							}
+						</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
