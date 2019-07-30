@@ -46,6 +46,7 @@ INSERT INTO Country(CountryId, CountryName) VALUES (2, "eu");
 INSERT INTO Country(CountryId, CountryName) VALUES (3, "jp");
 INSERT INTO Country(CountryId, CountryName) VALUES (4, "us");
 
+INSERT INTO Collector (CollectorId, UserName, Password) VALUES (1, "AmiiboApp", "password")
 
 
 

@@ -1,0 +1,59 @@
+@doctype.render
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="UTF-8">
+		<title>About Amiibo</title>
+		<link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/stylesheets/navbar.css">
+		<link rel="stylesheet" href="/assets/stylesheets/sort.css">
+	</head>
+	
+	<!--=====================================NAV BAR==========================================-->
+	<body>
+		<center>
+			<img src="/assets/images/logo-amiibo-glow.png" alt="Amiibo Header" height="150px;">
+		</center>
+		<div id="menu-nav">
+			<div id="navigation-bar">
+				<ul>
+					<li><a href="@routes.AmiiboController.getHome"><i class="fa fa-home"></i><span>Home</span></a>
+					</li>
+					<li><a href="@routes.SessionsController.getLogin"><i
+							class="fa fa-book"></i><span>Login</span></a></li>
+					<li><a href="@routes.AmiiboController.getCollection"><i
+							class="fa fa-mycollection"></i><span>My Collection</span></a>
+					</li>
+					<li><a href="@routes.AmiiboController.getAboutAmiibo"><i class="fa fa-book"></i><span>About Amiibo</span></a>
+					</li>
+					<li><a href="@routes.AmiiboController.getFigureList()"><i
+							class="fa fa-book"></i><span>Amiibo Figures</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<h4>
+			<div class="row">
+				<div class="col-2"></div>
+				<div class="col-8">
+					Amiibo are figures and cards made by Nintendo for the Nintendo Switch, 3DS, and
+					Wii U.
+					They Were originally made for Super Smash Bros. for the Wii U and 3DS, but have
+					since
+					been made for other Nintendo properties, such as Super Mario Odyssey, Legend of
+					Zelda, Metroid,
+					Kirby, and Animal Crossing. Third party publishers have also made Amiibo for
+					games like Shovel
+					Knight.
+					<br><br>
+					Amiibo contain an NFC (Near Field Communication) chip that allows Amiibo to
+					communicate
+					to Nintendo software. You can unlock items or can save characters to Amiibo and
+					use them elsewhere.
+					<br><br>
+					This website allows you to keep track of your collection.
+				</div>
+				<div class="col-2"></div>
+				<img src="/assets/images/header.jpg.png" alt="Amiibo Header" width="100%">
+			</div>
+		</h4>
+	</body>
+</html>

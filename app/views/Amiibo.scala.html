@@ -11,15 +11,23 @@
 	
 	<!--=====================================NAV BAR==========================================-->
 	<body>
+		<center>
+			<img src="/assets/images/logo-amiibo-glow.png" alt="Amiibo Header" height="150px;">
+		</center>
 		<div id="menu-nav">
 			<div id="navigation-bar">
 				<ul>
-					<li><a href="#"><i class="fa fa-home"></i><span>Home</span></a></li>
-					<li><a href="#"><i class="fa fa-book"></i><span>Login</span></a></li>
-					<li><a href="#"><i class="fa fa-mycollection"></i><span>My Collection</span></a>
+					<li><a href="@routes.AmiiboController.getHome"><i class="fa fa-home"></i><span>Home</span></a>
 					</li>
-					<li><a href="#"><i class="fa fa-book"></i><span>Contact</span></a></li>
-					<li><a href="#"><i class="fa fa-book"></i><span>About Amiibo</span></a></li>
+					<li><a href="@routes.SessionsController.getLogin"><i
+							class="fa fa-book"></i><span>Login</span></a></li>
+					<li><a href="@routes.AmiiboController.getCollection"><i
+							class="fa fa-mycollection"></i><span>My Collection</span></a>
+					</li>
+					<li><a href="@routes.AmiiboController.getAboutAmiibo"><i class="fa fa-book"></i><span>About Amiibo</span></a>
+					</li>
+					<li><a href="@routes.AmiiboController.getCardList()"><i
+							class="fa fa-book"></i><span>Amiibo Cards</span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -27,12 +35,14 @@
 		<div class="row">
 			<div class="col-8"></div>
 			<div class="col-3">
-				<input type="text" name="searchAmiibo" id="searchName"
-				       placeholder="Search Amiibo">
-				<input type="submit" value="Search" class="btn btn-primary">
+				<form>
+					<input type="text" name="searchName" id="searchName"
+					       placeholder="Search Amiibo">
+					<input type="submit" value="Search" class="btn btn-primary">
+				</form>
 			</div>
-			<div class="col-1"></div>
 		</div>
+		<div class="col-1"></div>
 		<!--=====================================TITLE BAR==========================================-->
 		<div class="container">
 			<div class="row">

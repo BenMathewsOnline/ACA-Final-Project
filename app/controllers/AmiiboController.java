@@ -2,8 +2,6 @@ package controllers;
 
 import models.Amiibo;
 import models.AmiiboRepository;
-import models.Country;
-import models.CountryRepository;
 import play.data.DynamicForm;
 import play.data.FormFactory;
 import play.db.jpa.Transactional;
@@ -17,24 +15,44 @@ public class AmiiboController extends Controller
 {
     private FormFactory formFactory;
     private AmiiboRepository amiiboRepository;
-    private CountryRepository countryRepository;
 
     @Inject
-    public AmiiboController (FormFactory formFactory, AmiiboRepository amiiboRepository, CountryRepository countryRepository)
+    public AmiiboController (FormFactory formFactory, AmiiboRepository amiiboRepository)
     {
         this.formFactory = formFactory;
         this.amiiboRepository = amiiboRepository;
-        this.countryRepository = countryRepository;
     }
 
     @Transactional(readOnly = true)
-    public Result getList()
+    public Result getFigureList()
     {
         DynamicForm form = formFactory.form().bindFromRequest();
-        String searchName = form.get("SearchName");
-        List<Amiibo> character = amiiboRepository.get(searchName);
+        String searchName = form.get("searchName");
+        List<Amiibo> character = amiiboRepository.getFigure(searchName);
         return ok(views.html.Amiibo.render(character));
     }
 
-    
+    @Transactional(readOnly = true)
+    public Result getCardList()
+    {
+        DynamicForm form = formFactory.form().bindFromRequest();
+        String searchName = form.get("searchName");
+        List<Amiibo> character = amiiboRepository.getCard(searchName);
+        return ok(views.html.AmiiboCards.render(character));
+    }
+
+    public Result getAboutAmiibo()
+    {
+        return ok(views.html.AboutAmiibo.render());
+    }
+
+    public Result getHome()
+    {
+        return ok(views.html.Home.render());
+    }
+
+    public Result getCollection()
+    {
+        return ok(views.html.MyCollection.render());
+    }
 }
