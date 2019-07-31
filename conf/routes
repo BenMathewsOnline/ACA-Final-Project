@@ -8,6 +8,7 @@
 
 GET     /login                      controllers.SessionsController.getLogin
 POST    /login                      controllers.SessionsController.postLogin
+POST    /newuser                    controllers.SessionsController.postNewCollector
 
 GET     /test                       controllers.TestController.getTest
 POST    /test                       controllers.TestController.postTest

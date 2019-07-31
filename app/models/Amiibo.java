@@ -11,7 +11,7 @@ public class Amiibo
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int amiiboId;
     private String amiiboName;
-    private byte[] imageId;
+    private String imageId;
     private int gameId;
     private int productTypeId;
 
@@ -25,7 +25,7 @@ public class Amiibo
         return amiiboName;
     }
 
-    public byte[] getImageId()
+    public String getImageId()
     {
         return imageId;
     }
@@ -50,7 +50,7 @@ public class Amiibo
         this.amiiboName = amiiboName;
     }
 
-    public void setImageId(byte[] imageId)
+    public void setImageId(String imageId)
     {
         this.imageId = imageId;
     }

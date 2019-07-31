@@ -7,7 +7,7 @@ body
 #menu-nav
 {
   max-width: 1000px;
-  margin: 130px auto;
+  margin: 70px auto;
   background-color: #ecf0f1;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -40,7 +40,7 @@ body
   padding: 20px 0;
   display: block;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
 #navigation-bar a:hover

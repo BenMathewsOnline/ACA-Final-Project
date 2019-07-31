@@ -7,6 +7,10 @@
 		<link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/assets/stylesheets/navbar.css">
 		<link rel="stylesheet" href="/assets/stylesheets/sort.css">
+		<link rel="stylesheet" href="/assets/stylesheets/hoverimage.css">
+		<link rel="stylesheet" href="/assets/javascripts/sort.js">
+		<link rel="stylesheet" href="assets/stylesheets/searchbutton.css">
+	
 	</head>
 	
 	<!--=====================================NAV BAR==========================================-->
@@ -34,15 +38,15 @@
 		
 		<div class="row">
 			<div class="col-8"></div>
-			<div class="col-3">
-				<form>
+			<div class="col-2">
+				<form class="example">
 					<input type="text" name="searchName" id="searchName"
-					       placeholder="Search Amiibo">
-					<input type="submit" value="Search" class="btn btn-primary">
+					       placeholder="Search Cards">
+					<button type="submit" value="Search">Q</button>
 				</form>
 			</div>
+			<div class="col-2"></div>
 		</div>
-		<div class="col-1"></div>
 		<!--=====================================TITLE BAR==========================================-->
 		<div class="container">
 			<div class="row">
@@ -51,9 +55,9 @@
 						<tr>
 							<th onclick="sortTable(0)">Add</th>
 							<th onclick="sortTable(1)">Amiibo Name</th>
+							<td></td>
 							<th onclick="sortTable(2)">Game Series</th>
-							<th onclick="sortTable(3)">Type</th>
-							<th onclick="sortTable(4)">Id Number</th>
+							<th onclick="sortTable(3)">Release Date</th>
 						</tr>
 					</thead>
 					<!--======================================================================================-->
@@ -61,16 +65,12 @@
 					<tbody>
 						<tr>
 							<td>
-								<input type="checkbox" class="custom-control-input" id="add">
-								<label class="container">
-									<input type="checkbox" checked>
-								</label>
-							</td>
-							<td>@amiibo.getAmiiboName</td>
+								<input type="checkbox" class="container" id="add">
+								<label class="container"></label></td>
+							<td class="hoveritem">@amiibo.getAmiiboName</td>
+							<td><img class="hoverimage" src="@amiibo.getImageId"></td>
 							<td>@amiibo.getGameId</td>
 							<td>@amiibo.getProductTypeId</td>
-							<td>@amiibo.getAmiiboId</td>
-							<!--	@amiibo.getImageId -->
 							}
 						</tr>
 				</table>

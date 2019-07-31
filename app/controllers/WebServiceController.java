@@ -48,10 +48,12 @@ public class WebServiceController extends Controller
         {
             Logger.error(e.getMessage());
         }
+
         for (models.amiibo.Amiibo amiiboEntry : amiiboList.getAmiibo())
         {
             Amiibo amiibo = new Amiibo();
             amiibo.setAmiiboName(amiiboEntry.getName());
+            amiibo.setImageId(amiiboEntry.getImage());
 
             switch (amiiboEntry.getType())
             {
@@ -152,6 +154,6 @@ public class WebServiceController extends Controller
             }
         }
 
-        return ok("hi there " + amiiboList.getAmiibo().size());
+        return ok("Success! " + amiiboList.getAmiibo().size());
     }
 }

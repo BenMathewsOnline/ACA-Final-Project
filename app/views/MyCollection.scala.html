@@ -1,57 +1,62 @@
 @doctype.render
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>My Collection</title>
-		<link rel="stylesheet" href="/assets/stylesheets/navbar.css">
-		<link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/assets/stylesheets/sort.css">
-	</head>
-	<!--=====================================NAV BAR==========================================-->
-	<body>
-		<center>
-			<img src="/assets/images/logo-amiibo-glow.png" alt="Amiibo Header" height="150px;" >
+		<head>
+			<meta charset="UTF-8">
+			<title>My Collection</title>
+			<link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+			<link rel="stylesheet" href="/assets/stylesheets/navbar.css">
+			<link rel="stylesheet" href="/assets/stylesheets/sort.css">
+		</head>
+		<!--=====================================NAV BAR==========================================-->
+		<body>
+			<center>
+			<img src="/assets/images/logo-amiibo-glow.png" alt="Amiibo Header" height="150px;">
 		</center>
-		<div id="menu-nav">
-			<div id="navigation-bar">
-				<ul>
-					<li><a href="@routes.AmiiboController.getHome"><i class="fa fa-home"></i><span>Home</span></a></li>
-					<li><a href="@routes.SessionsController.getLogin"><i class="fa fa-book"></i><span>Login</span></a></li>
-					<li><a href="@routes.AmiiboController.getCollection"><i class="fa fa-mycollection"></i><span>My Collection</span></a>
-					</li>
-					<li><a href="@routes.AmiiboController.getAboutAmiibo"><i class="fa fa-book"></i><span>About Amiibo</span></a></li>
-					<li><a href="@routes.AmiiboController.getFigureList()"><i class="fa fa-book"></i><span>Amiibo Figures</span></a></li>
-				</ul>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-8"></div>
-			<div class="col-3">
-				<form>
-					<input type="text" name="searchName" id="searchName"
-					       placeholder="Search Amiibo">
-					<input type="submit" value="Search" class="btn btn-primary">
-				</form>
-			</div>
-			<div class="col-1"></div>
-		</div>
-		<!--=====================================TITLE BAR==========================================-->
-		<div class="container">
+			<header>
+				<div id="menu-nav">
+					<div id="navigation-bar">
+						<ul>
+							<li><a href="@routes.AmiiboController.getHome"><i
+									class="fa fa-home"></i><span>Home</span></a></li>
+							<li><a href="@routes.SessionsController.getLogin"><i class="fa fa-book"></i><span>Login</span></a>
+							</li>
+							<li><a href="@routes.AmiiboController.getCollection"><i
+									class="fa fa-mycollection"></i><span>My Collection</span></a>
+							</li>
+							<li><a href="@routes.AmiiboController.getAboutAmiibo"><i
+									class="fa fa-book"></i><span>About Amiibo</span></a></li>
+							<li><a href="@routes.AmiiboController.getFigureList()"><i
+									class="fa fa-book"></i><span>Amiibo Figures</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</header>
 			<div class="row">
-				<table class="table table-striped table-dark table-hover" id="amiiboTable">
-					<thead>
-						<tr>
-							<th onclick="sortTable(0)">Add</th>
-							<th onclick="sortTable(1)">Amiibo Name</th>
-							<th onclick="sortTable(2)">Game Series</th>
-							<th onclick="sortTable(3)">Type</th>
-							<th onclick="sortTable(4)">Id Number</th>
-						</tr>
-					</thead>
-				</table>
+				<div class="col-8"></div>
+				<div class="col-3">
+					<form>
+						<input type="text" name="searchName" id="searchName"
+						       placeholder="Search Amiibo">
+						<input type="submit" value="Search" class="btn btn-primary">
+					</form>
+				</div>
+				<div class="col-1"></div>
 			</div>
-		</div>
-	</body>
-</html>
+			<!--=====================================TITLE BAR==========================================-->
+			<div class="container">
+				<div class="row">
+					<table class="table table-striped table-dark table-hover" id="amiiboTable">
+						<thead>
+							<tr>
+								<th onclick="sortTable(0)">Add</th>
+								<th onclick="sortTable(1)">Amiibo Name</th>
+								<th onclick="sortTable(2)">Game Series</th>
+								<th onclick="sortTable(3)">Type</th>
+								<th onclick="sortTable(4)">Id Number</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</body>
+	</html>

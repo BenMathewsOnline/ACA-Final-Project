@@ -1,0 +1,12 @@
+.hoverimage
+{
+    display: none
+}
+
+.hoveritem:hover ~ td > img
+{
+    display: inline;
+    position: absolute;
+    left: 40%;
+    height: 30%;
+}
