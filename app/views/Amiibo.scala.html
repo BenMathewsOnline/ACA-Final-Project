@@ -1,4 +1,4 @@
-@(amiibos : List[Amiibo])
+@(amiibos : List[Amiibo], userName: String)
 @doctype.render
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 	<head>
@@ -23,11 +23,11 @@
 				<ul>
 					<li><a href="@routes.AmiiboController.getHome"><i class="fa fa-home"></i><span>Home</span></a>
 					</li>
-					<li><a href="@routes.SessionsController.getLogin"><i
-							class="fa fa-book"></i><span>Login</span></a></li>
 					<li><a href="@routes.AmiiboController.getCollection"><i
 							class="fa fa-mycollection"></i><span>My Collection</span></a>
 					</li>
+					<li><a href="@routes.SessionsController.getLogin"><i
+							class="fa fa-book"></i><span>Login</span></a></li>
 					<li><a href="@routes.AmiiboController.getAboutAmiibo"><i class="fa fa-book"></i><span>About Amiibo</span></a>
 					</li>
 					<li><a href="@routes.AmiiboController.getCardList()"><i
@@ -35,13 +35,21 @@
 				</ul>
 			</div>
 		</div>
-		
 		<div class="row">
-			<div class="col-8"></div>
+			<div class="col-2"></div>
+			<div class="col-1">@userName</div>
+			<div class="col-5">
+				
+				<form method="get" action="/mycollection">
+				      @helper.CSRF.formField
+				<button name="amiiboCollection" value="save" id="amiiboCollection">Save to Collection</button>
+				</form>
+				
+			</div>
 			<div class="col-2">
 				<form class="example">
 					<input type="text" name="searchName" id="searchName"
-					       placeholder="Search Cards">
+					       placeholder="Search Figures ">
 					<button type="submit" value="Search">Q</button>
 				</form>
 			</div>
@@ -64,7 +72,7 @@
 					@for(amiibo <- amiibos){
 					<tbody>
 						<tr>
-							<td>
+							<td class="hoveritem">
 								<input type="checkbox" class="container" id="add">
 								<label class="container"></label></td>
 							<td class="hoveritem">@amiibo.getAmiiboName</td>

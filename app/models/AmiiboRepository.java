@@ -1,7 +1,6 @@
 package models;
 
 import play.db.jpa.JPAApi;
-
 import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.TypedQuery;

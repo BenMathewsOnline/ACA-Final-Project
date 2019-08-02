@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.8">
+ <project-name>Amiibo_Final_Graph</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="383c5ae5-23dd-405f-89fe-b2fa9f05a242" name="AmiiboName" objectType="TABLE" physicalName="Amiibo_Name" >
+   <remarks></remarks>
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="037e78b1-8912-4a3c-afb4-1347bc480f53" autoIncrement="true" autoIncrementSequenceName="Amiibo_Name_AmiiboID_seq" defaultValue="" name="AmiiboID" nullable="0" physicalName="AmiiboID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL3" populated="true" UUID="7b224ef7-0a1d-4cc8-aa6f-c54f8224e8df" autoIncrement="false" autoIncrementSequenceName="Amiibo_Name_AmiiboName_seq" defaultValue="" name="AmiiboName" nullable="0" physicalName="AmiiboName" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL4" populated="true" UUID="5473aa6f-b429-4057-97e2-997eabfa43b4" autoIncrement="false" autoIncrementSequenceName="Amiibo_Name_ImageId_seq" defaultValue="" name="ImageId" nullable="0" physicalName="ImageId" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2004" userDefinedTypeUUID="5c50e616-a448-40e1-abcd-5bfc04dcc607" >
+     <remarks></remarks>
+    </column>
+    <column id="COL5" populated="true" UUID="dfdae976-701d-4e87-a475-19d0b1a7dbd2" autoIncrement="false" autoIncrementSequenceName="Game_GameId_seq" defaultValue="" name="GameId" nullable="0" physicalName="GameId" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL6" populated="true" UUID="1fba9f84-f08f-404a-85f6-86068bda7e77" autoIncrement="false" autoIncrementSequenceName="ProductType_ProductTypeId_seq" defaultValue="" name="ProductTypeId" nullable="0" physicalName="ProductTypeId" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX7" populated="true" UUID="7a30ac5c-3edc-4727-8f0e-bb1d8d4abd3a" clustered="false" name="Amiibo_Name_pk" physicalName="amiibo_name_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC8" populated="true" UUID="700fabdf-d445-4423-8c5d-74b354264bcf" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="AmiiboID" physicalName="AmiiboID" />
+    </index>
+    <index id="IDX9" populated="true" UUID="6f251c96-de57-49e1-a4e6-4e212d10c8fb" clustered="false" name="AmiiboName_idx" physicalName="amiiboname_idx" primaryKeyIndex="false" unique="false" >
+     <index-column id="IDC10" populated="true" UUID="8c7c4074-c6c0-4b42-bf9d-5211d6cf30e2" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="AmiiboID" physicalName="AmiiboID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB11" populated="true" UUID="220194e1-6e1a-40a2-a44c-4f97b48d3b3e" name="Game" objectType="TABLE" physicalName="Game" >
+   <remarks></remarks>
+   <folder id="FOLTAB111" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL12" populated="true" UUID="4646ba74-0673-4a89-bc91-59a078cf5da8" autoIncrement="true" autoIncrementSequenceName="Game_GameId_seq_1" defaultValue="" name="GameId" nullable="0" physicalName="GameId" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL13" populated="true" UUID="94da67ba-295a-4a8f-bf95-6393a8265b8c" autoIncrement="false" autoIncrementSequenceName="Game_GameName_seq" defaultValue="" name="GameName" nullable="0" physicalName="GameName" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB113" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB112" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB114" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX14" populated="true" UUID="7a186495-9146-49f9-9c1e-a7eccd316155" clustered="false" name="Game_pk" physicalName="game_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC15" populated="true" UUID="8e4a70ea-1bdd-4edd-89df-916fe6d9a862" ascendingOrDescending="UNSPECIFIED" column-ref="COL12" name="GameId" physicalName="GameId" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB16" populated="true" UUID="ecf87366-ea59-43ca-b972-1283b88d45d2" name="ProductType" objectType="TABLE" physicalName="ProductType" >
+   <remarks></remarks>
+   <folder id="FOLTAB161" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL17" populated="true" UUID="056b5c6a-c81e-4a87-9156-2a291947ae9f" autoIncrement="true" autoIncrementSequenceName="ProductType_ProductTypeId_seq_1" defaultValue="" name="ProductTypeId" nullable="0" physicalName="ProductTypeId" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL18" populated="true" UUID="56d9d99a-c494-4b70-b706-6b6b6e0a4379" autoIncrement="false" autoIncrementSequenceName="ProductType_ProductTypeName_seq" defaultValue="" name="ProductTypeName" nullable="0" physicalName="ProductTypeName" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB163" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB162" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB164" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX19" populated="true" UUID="e94c9cb6-ae0b-4ef7-b154-afaf970ef220" clustered="false" name="ProductType_pk" physicalName="producttype_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC20" populated="true" UUID="2ebdcb88-7533-4258-8160-ca3fb86127b3" ascendingOrDescending="UNSPECIFIED" column-ref="COL17" name="ProductTypeId" physicalName="ProductTypeId" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB21" populated="true" UUID="4b47faf4-9e39-4d5b-89d5-51980621a8d5" name="AmiiboCountry" objectType="TABLE" physicalName="AmiiboCountry" >
+   <remarks></remarks>
+   <folder id="FOLTAB211" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL22" populated="true" UUID="a977670f-e09d-4490-b1db-c4fe661a0416" autoIncrement="true" autoIncrementSequenceName="AmiiboCountry_AmiiboCountryId_seq" defaultValue="" name="AmiiboCountryId" nullable="0" physicalName="AmiiboCountryId" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL23" populated="true" UUID="fe729e7f-38e8-4bea-b350-0bb6a71b1876" autoIncrement="false" autoIncrementSequenceName="Amiibo_Name_AmiiboID_seq_1" defaultValue="" name="AmiiboID" nullable="0" physicalName="AmiiboID" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL24" populated="true" UUID="6c04f75b-87f3-4989-8b5c-3a2271d3564b" autoIncrement="false" autoIncrementSequenceName="Country_CountryId_seq" defaultValue="" name="CountryId" nullable="0" physicalName="CountryId" precision="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL25" populated="true" UUID="250b2c53-019d-460c-9e79-dc6002d38c5a" autoIncrement="false" autoIncrementSequenceName="AmiiboCountry_ReleaseDate_seq" defaultValue="" name="ReleaseDate" nullable="1" physicalName="ReleaseDate" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB213" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB212" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB214" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX26" populated="true" UUID="7e9de522-3a3b-42df-825a-e74e2280c582" clustered="false" name="AmiiboCountry" physicalName="amiibocountry" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC27" populated="true" UUID="1b0766fc-36b1-4f48-a80d-0859742e4271" ascendingOrDescending="UNSPECIFIED" column-ref="COL22" name="AmiiboCountryId" physicalName="AmiiboCountryId" />
+    </index>
+    <index id="IDX28" populated="true" UUID="597a2d36-58f8-4792-b439-565b1ec7c783" clustered="false" name="AmiiboCountry_idx" physicalName="amiibocountry_idx" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC29" populated="true" UUID="b9ceea39-bee3-4b8f-b54f-309c5979235d" ascendingOrDescending="UNSPECIFIED" column-ref="COL23" name="AmiiboID" physicalName="AmiiboID" />
+     <index-column id="IDC30" populated="true" UUID="37f865b4-1619-4d11-808e-40fec9610baf" ascendingOrDescending="UNSPECIFIED" column-ref="COL24" name="CountryId" physicalName="CountryId" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB31" populated="true" UUID="9b72a616-caec-4443-afd7-b949695fd811" name="Country" objectType="TABLE" physicalName="Country" >
+   <remarks></remarks>
+   <folder id="FOLTAB311" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL32" populated="true" UUID="7a453bbe-d1ec-485d-a33d-ca3dec9a01e9" autoIncrement="false" autoIncrementSequenceName="Country_CountryId_seq_1" defaultValue="" name="CountryId" nullable="0" physicalName="CountryId" precision="2" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL33" populated="true" UUID="91b9ff39-b444-4a9b-b67c-4b77e0f451b6" autoIncrement="false" autoIncrementSequenceName="Country_CountryName_seq" defaultValue="" name="CountryName" nullable="0" physicalName="CountryName" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB313" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB312" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB314" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX34" populated="true" UUID="d0a77dbc-ffd6-4b0a-a131-48a3dae020f1" clustered="false" name="Country_pk" physicalName="country_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC35" populated="true" UUID="355b7cdb-5971-4504-abe0-cd3de1d0390f" ascendingOrDescending="UNSPECIFIED" column-ref="COL32" name="CountryId" physicalName="CountryId" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB36" populated="true" UUID="7470ba20-52d5-4528-95f7-cd7fd98c17f0" name="Collector " objectType="TABLE" physicalName="Collector " >
+   <remarks></remarks>
+   <folder id="FOLTAB361" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL37" populated="true" UUID="25f6a0d2-10a5-4310-8f73-3ebc81cb29e9" autoIncrement="true" autoIncrementSequenceName="Collector _CollectorId_seq" defaultValue="" name="CollectorId" nullable="0" physicalName="CollectorId" precision="50" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL38" populated="true" UUID="fcbbd3d3-60bc-4bbd-9367-cbfb323599f6" autoIncrement="false" autoIncrementSequenceName="Collector _UserName_seq" defaultValue="" name="UserName" nullable="0" physicalName="UserName" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL39" populated="true" UUID="64081741-bdb7-469c-9ff9-398f5af8b6ca" autoIncrement="false" autoIncrementSequenceName="Collector _Password_seq" defaultValue="" name="Password" nullable="0" physicalName="Password" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB363" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB362" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB364" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX40" populated="true" UUID="b93198e8-e092-460b-8b1f-9d616198e323" clustered="false" name="Collector _pk" physicalName="Collector _pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC41" populated="true" UUID="76bfc062-01d8-4a6b-9a01-b3595cc3108f" ascendingOrDescending="UNSPECIFIED" column-ref="COL37" name="CollectorId" physicalName="CollectorId" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL42" populated="true" UUID="28c5d60c-bd91-4651-a726-945fcd0609e9" deferrability="7" deleteRule="3" fk-table-ref="TAB21" fkCardinality="7" identifying="false" name="Amiibo_Name_AmiiboCountry_fk" physicalName="amiibo_name_amiibocountry_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP43" populated="true" UUID="1bcc0474-c586-4140-8256-8f90d221184a" fk-column-ref="COL23" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL44" populated="true" UUID="b36843f3-1b71-4f6a-a442-5ea748e02c42" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="Game_Amiibo_Name_fk" physicalName="game_amiibo_name_fk" pk-table-ref="TAB11" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP45" populated="true" UUID="369d4dd6-93ea-4ec4-892a-ef61c431db18" fk-column-ref="COL5" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL12" />
+   </relationship>
+   <relationship id="REL46" populated="true" UUID="8b947c3d-9c98-403d-bd3f-585ba1ee7be7" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="ProductType_Amiibo_Name_fk" physicalName="producttype_amiibo_name_fk" pk-table-ref="TAB16" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP47" populated="true" UUID="bf3c948d-b454-4d6d-a80a-0266c867ca9d" fk-column-ref="COL6" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL17" />
+   </relationship>
+   <relationship id="REL48" populated="true" UUID="ea508b8c-1d87-471d-9ac8-56e221e6c204" deferrability="7" deleteRule="3" fk-table-ref="TAB21" fkCardinality="7" identifying="false" name="Country_AmiiboCountry_fk" physicalName="country_amiibocountry_fk" pk-table-ref="TAB31" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP49" populated="true" UUID="9f8dff8b-f44c-4479-9209-1e21b63f2e86" fk-column-ref="COL24" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL32" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="false"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="123" y="60" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB11" x="665" y="69" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB16" x="662" y="151" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB21" x="119" y="272" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB31" x="662" y="267" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB36" x="454" y="413" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL44" pkConnection="0.6031746031746031" fkConnection="0.4409448818897638" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL46" pkConnection="0.23809523809523808" fkConnection="0.6306306306306306" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL42" pkConnection="0.5039370078740157" fkConnection="0.49624060150375937" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL48" pkConnection="0.5873015873015873" fkConnection="0.4050632911392405" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>

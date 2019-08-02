@@ -1,14 +1,8 @@
 package models;
-
-import play.data.DynamicForm;
 import play.db.jpa.JPAApi;
-import play.db.jpa.Transactional;
-import play.mvc.Result;
-import play.data.FormFactory;
 import javax.inject.Inject;
 import javax.persistence.TypedQuery;
 import java.util.List;
-import static play.mvc.Results.ok;
 
 public class CollectorRepository
 {

@@ -1,3 +1,4 @@
+@(userName: String)
 @doctype.render
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 	<head>
@@ -15,13 +16,17 @@
 		<div id="menu-nav">
 			<div id="navigation-bar">
 				<ul>
-					<li><a href="@routes.AmiiboController.getHome"><i class="fa fa-home"></i><span>Home</span></a></li>
-					<li><a href="@routes.SessionsController.getLogin"><i class="fa fa-book"></i><span>Login</span></a></li>
-					<li><a href="@routes.AmiiboController.getCollection"><i class="fa fa-mycollection"></i><span>My Collection</span></a>
+					<li><a href="@routes.AmiiboController.getHome"><i class="fa fa-home"></i><span>Home</span></a>
 					</li>
-					<li><a href="@routes.AmiiboController.getAboutAmiibo"><i class="fa fa-book"></i><span>About Amiibo</span></a></li>
+					<li><a href="@routes.AmiiboController.getCollection"><i
+							class="fa fa-mycollection"></i><span>My Collection</span></a>
+					</li>
+					<li><a href="@routes.SessionsController.getLogin"><i
+							class="fa fa-book"></i><span>Login</span></a></li>
+					<li><a href="@routes.AmiiboController.getAboutAmiibo"><i class="fa fa-book"></i><span>About Amiibo</span></a>
+					</li>
 					<li><a href="@routes.AmiiboController.getFigureList()"><i
-							class="fa fa-book"></i><span>Amiibo Figures</span></a></li>
+							class="fa fa-book"></i><span>Amiibo Figure</span></a></li>
 				</ul>
 			</div>
 		</div>

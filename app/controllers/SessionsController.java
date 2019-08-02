@@ -39,7 +39,9 @@ public class SessionsController extends Controller
         }
         else
         {
-            return ok("Welcome " + collector.getUserName());
+            session().put("userName", collector.getUserName());
+            session().put("CollectorId", "" + collector.getCollectorId());
+            return redirect(routes.AmiiboController.getCollection());
         }
     }
 
@@ -62,7 +64,8 @@ public class SessionsController extends Controller
         }
         else
         {
-            return ok(views.html.NewUserSuccess.render());
+            String userName = session().get("userName");
+            return ok(views.html.Home.render(userName));
         }
     }
 }
